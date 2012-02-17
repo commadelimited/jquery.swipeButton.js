@@ -39,9 +39,8 @@
 				$('div a:not(' + o.btnClass + ')', $li).bind('click.swipe', function(e){
 					e.stopPropagation();
 					e.preventDefault();
-					$a = $(this);
+					$(this).unbind('click.swipe');
 					$('div.ui-btn', $li).remove();
-					$a.unbind('click.swipe');
 				})
 
 			});
