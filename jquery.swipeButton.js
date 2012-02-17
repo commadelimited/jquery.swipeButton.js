@@ -37,7 +37,7 @@
 
 				// override row click
 				$('div a:not(' + o.btnClass + ')', $li).bind('click.swipe', function(e){
-					e.preventDefault();
+					e.stopPropagation();
 					$a = $(this);
 					$('div.ui-btn', $li).remove();
 					$a.unbind('click.swipe');
