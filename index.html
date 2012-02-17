@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Swipe to Delete</title>
+	<link rel="stylesheet"  href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+	<link rel="stylesheet"  href="styles.css" />
+	<script src="http://code.jquery.com/jquery-1.6.4.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+	<script src="jquery.swipeButton.js"></script>
+
+	<script>
+		$(document).ready(function() {
+
+			// attach the plugin to an element
+			$('#swipeMe li').swipeDelete({
+				btnTheme: 'e',
+				click: function(e){
+					e.preventDefault();
+					//$(this).parent('li').remove();
+					$(this).parents('li').remove();
+				}
+			});
+
+		});
+	</script>
+
+</head> 
+<body> 
+	<div data-role="page">
+		<div data-role="content">
+			<ul id="swipeMe" data-role="listview" data-swipe-direction="swiperight">
+				<li data-swipeurl="swiped.html?1"><a href="row-click.html">List Item One</a></li>
+				<li data-swipeurl="swiped.html?2"><a href="row-click.html">List Item Two</a></li>
+				<li data-swipeurl="swiped.html?3"><a href="row-click.html">List Item Three</a></li>
+			</ul>
+			<br /><br />
+			<a href="javascript: $('#swipeMe li:nth-child(3)').trigger('swiperight')" data-role="button">trigger swipe right</a>
+		</div>		
+	</div>
+
+</body>
+</html>
