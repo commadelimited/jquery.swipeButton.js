@@ -8,7 +8,7 @@ Clone the git repo - `git clone git@github.com:commadelimited/jquery.swipeButton
 
 ## Usage & Documentation
 Minimum usage requires that you override the default click event. All other arguments are optional.
-''' javascript
+```javascript
 $('#swipeMe li').swipeDelete({
 	click: function(e){
 		e.preventDefault();
@@ -26,7 +26,7 @@ $('#swipeMe li').swipeDelete({
 		$(this).parents('li').remove();
 	}
 });
-'''
+```
 ## Contributing
 
 You are invited to contribute code and suggestions to this project. The more the merrier.
