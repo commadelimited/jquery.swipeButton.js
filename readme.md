@@ -31,6 +31,10 @@ Minimum usage requires that you override the default click event. All other argu
 		}
 	});
 
+## Screenshots
+![Before initial swipe](http://andymatthews.net/code/swipeButton/swipebutton-01.jpg)
+![After initial swipe](http://andymatthews.net/code/swipeButton/swipebutton-02.jpg)
+
 ## Contributing
 
 You are invited to contribute code and suggestions to this project. The more the merrier.
