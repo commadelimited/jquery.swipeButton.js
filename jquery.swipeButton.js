@@ -40,7 +40,7 @@
 					e.stopPropagation();
 					e.preventDefault();
 					$(this).unbind('click.swipe');
-					$('div.ui-btn', $li).remove();
+					$li.removeClass('ui-btn-active').find('div.ui-btn').remove();
 				})
 
 			});
