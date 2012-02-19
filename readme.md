@@ -8,25 +8,25 @@ Clone the git repo - `git clone git@github.com:commadelimited/jquery.swipeButton
 
 ## Usage & Documentation
 Minimum usage requires that you override the default click event. All other arguments are optional.
-```javascript
-$('#swipeMe li').swipeDelete({
-	click: function(e){
-		e.preventDefault();
-		$(this).parents('li').remove();
-	}
-});
 
-$('#swipeMe li').swipeDelete({
-	direction: 'swiperight', // standard jquery mobile event name
-	btnLabel: 'Delete',
-	btnTheme: 'b',
-	btnClass: 'aSwipeBtn',
-	click: function(e){
-		e.preventDefault();
-		$(this).parents('li').remove();
-	}
-});
-```
+	$('#swipeMe li').swipeDelete({
+		click: function(e){
+			e.preventDefault();
+			$(this).parents('li').remove();
+		}
+	});
+
+	$('#swipeMe li').swipeDelete({
+		direction: 'swiperight', // standard jquery mobile event name
+		btnLabel: 'Delete',
+		btnTheme: 'b',
+		btnClass: 'aSwipeBtn',
+		click: function(e){
+			e.preventDefault();
+			$(this).parents('li').remove();
+		}
+	});
+
 ## Contributing
 
 You are invited to contribute code and suggestions to this project. The more the merrier.
