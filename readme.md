@@ -23,7 +23,11 @@ Minimum usage requires that you override the default click event. All other argu
 		btnClass: 'aSwipeBtn',
 		click: function(e){
 			e.preventDefault();
+			var url = $(e.target).attr('href');
 			$(this).parents('li').remove();
+			$.post(url, function(data) {
+				console.log(data);
+			});
 		}
 	});
 

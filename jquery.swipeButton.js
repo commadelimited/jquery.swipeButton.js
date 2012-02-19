@@ -1,6 +1,6 @@
 /*
 	Name: jquery.swipeButton.js
-	Author: Andy Matthews
+	Author: Andy andyMatthews
 	Website: http://andyMatthews.net
 	Packed With: http://jsutility.pjoneil.net/
 */
