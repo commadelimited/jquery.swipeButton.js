@@ -8,17 +8,16 @@
 	<link rel="stylesheet"  href="jquery.swipeButton.css" />
 	<script src="http://code.jquery.com/jquery-1.6.4.js"></script>
 	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
-	<script src="jquery.swipeButton.js"></script>
+	<script src="jquery.swipeButton.min.js"></script>
 
 	<script>
 		$(document).ready(function() {
 
 			// attach the plugin to an element
 			$('#swipeMe li').swipeDelete({
-				btnTheme: 'a',
+				btnTheme: 'e',
 				click: function(e){
 					e.preventDefault();
-					//$(this).parent('li').remove();
 					$(this).parents('li').remove();
 				}
 			});
@@ -30,13 +29,16 @@
 <body> 
 	<div data-role="page">
 		<div data-role="content">
-			<ul id="swipeMe" data-role="listview" data-swipe-direction="swiperight">
+			<ul id="swipeMe" data-role="listview">
 				<li data-swipeurl="swiped.html?1"><a href="row-click.html">List Item One</a></li>
 				<li data-swipeurl="swiped.html?2"><a href="row-click.html">List Item Two</a></li>
 				<li data-swipeurl="swiped.html?3"><a href="row-click.html">List Item Three</a></li>
 			</ul>
+			<!--
+			uncomment this button to easily trigger the swipe event from a desktop browser
 			<br /><br />
 			<a href="javascript: $('#swipeMe li:nth-child(3)').trigger('swiperight')" data-role="button">trigger swipe right</a>
+			-->
 		</div>		
 	</div>
 </body>

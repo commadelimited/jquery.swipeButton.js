@@ -1,7 +1,7 @@
 /*
 	Name: jquery.swipeButton.js
 	Author: Andy Matthews
-	Website: http://www.andyMatthews.net
+	Website: http://andyMatthews.net
 	Packed With: http://jsutility.pjoneil.net/
 */
 (function($){
@@ -54,7 +54,10 @@
 		btnLabel: 'Delete',
 		btnTheme: 'e',
 		btnClass: 'aSwipeBtn',
-		click: function(){}
+		click: function(e){
+			e.preventDefault();
+			$(this).parents('li').remove();
+		}
 	};
 
 })(jQuery);
