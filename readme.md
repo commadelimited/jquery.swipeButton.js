@@ -2,6 +2,9 @@
 
 SwipeButton is a jQuery Mobile plugin which allows developers to add iPhone style buttons to listview rows by attaching to the swipe event. This project contains everything you need to get started.
 
+## jQuery Mobile 1.1 compatible
+jQuery Mobile made a slight change in version 1.1 with the way they create buttons inside list views. swipeButton has been updated to account for that change and offers a test case for your perusal.
+
 ## Example
 View a simple [demo of swipeButton](http://andymatthews.net/code/swipebutton/)
 
