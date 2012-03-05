@@ -21,7 +21,7 @@
 				var $li = $(this);
 
 				// remove all currently displayed buttons
-				$('div.ui-btn', $parent).remove();
+				$('div.ui-btn, .' + o.btnClass, $parent).remove();
 				
 				// create button
 				var $swipeBtn = $('<a>' + o.btnLabel + '</a>').attr({
