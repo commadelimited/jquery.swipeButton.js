@@ -22,8 +22,10 @@
 				// reference the current item
 				var $li = $(this);
 
-				// remove all currently displayed buttons
-				$('div.ui-btn, .' + o.btnClass, $parent).remove();
+                // remove all currently displayed buttons
+                $('div.ui-btn, .' + o.btnClass, $parent).animate({ width: 'toggle' }, 200, function(e) {
+                    $(this).remove();
+                });
 				
 				// create button
 				var $swipeBtn = $('<a>' + o.btnLabel + '</a>').attr({
@@ -34,8 +36,9 @@
 									'href': $li.data('swipeurl')
 								})
 								.bind('click tap', o.click);
-				// insert button into list item
-				$li.prepend($swipeBtn).find('.' + o.btnClass ).button();
+                // slide insert button into list item
+                $swipeBtn.prependTo($li).button();
+                $li.find('.ui-btn').hide().animate({ width: 'toggle' }, 200);
 
 				// override row click
 				$('div a:not(' + o.btnClass + ')', $li).bind('click.swipe', function(e){
@@ -58,7 +61,7 @@
 		btnClass: 'aSwipeBtn',
 		click: function(e){
 			e.preventDefault();
-			$(this).parents('li').remove();
+			$(this).parents('li').slideUp();
 		}
 	};
 

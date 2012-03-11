@@ -19,7 +19,7 @@
 				click: function(e){
 					e.preventDefault();
 					var url = $(e.target).attr('href');
-					$(this).parents('li').remove();
+					$(this).parents('li').slideUp();
 					$.post(url, function(data) {
 						console.log(data);
 					});
