@@ -10,7 +10,9 @@
 		
 		o = $.extend( {}, $.fn.swipeDelete.defaults, o );
 		
-		return this.each(function(i, el){
+		return this.filter('[data-swipeurl]').each(function(i, el){
+
+			console.log(el);
 
 			var $e = $(el);
 			var $parent = $(el).parent('ul');
