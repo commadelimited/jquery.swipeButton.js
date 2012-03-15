@@ -4,11 +4,11 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Swipe to Delete</title>
-	<link rel="stylesheet"  href="http://jquerymobile.com/demos/1.1.0-rc.1/css/themes/default/jquery.mobile.css" />
-	<link rel="stylesheet"  href="jquery.swipeButton.css" />
-	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-	<script src="http://jquerymobile.com/demos/1.1.0-rc.1/js/jquery.mobile.docs.js"></script>
-	<script src="jquery.swipeButton.min.js"></script>
+	<link rel="stylesheet"  href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+	<link rel="stylesheet"  href="jquery.swipeButton-1.0.css" />
+	<script src="http://code.jquery.com/jquery-1.6.4.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+	<script src="jquery.swipeButton.min-1.0.1.js"></script>
 
 	<script>
 		$(document).ready(function() {
@@ -19,7 +19,7 @@
 				click: function(e){
 					e.preventDefault();
 					var url = $(e.target).attr('href');
-					$(this).parents('li').remove();
+					$(this).parents('li').slideUp();
 					$.post(url, function(data) {
 						console.log(data);
 					});
