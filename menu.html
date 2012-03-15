@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Swipe to Delete</title>
 	<link rel="stylesheet"  href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
-	<!-- <link rel="stylesheet"  href="jquery.swipeButton.css" /> -->
+	<link rel="stylesheet"  href="jquery.swipeButton-1.0.1.css" />
 	<style>	
 		.nav-glyphish-example .ui-btn .ui-btn-inner { padding-top: 40px !important; }
 		.nav-glyphish-example .ui-btn .ui-icon { width: 30px!important; height: 30px!important; margin-left: -15px !important; box-shadow: none!important; -moz-box-shadow: none!important; -webkit-box-shadow: none!important; -webkit-border-radius: 0 !important; border-radius: 0 !important; }
@@ -18,7 +18,7 @@
 	</style>
 	<script src="http://code.jquery.com/jquery-1.6.4.js"></script>
 	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
-	<script src="jquery.swipeButton.js"></script>
+	<script src="jquery.swipeButton.min-1.1.js"></script>
 
 	<script>
 		$(document).ready(function() {
@@ -29,7 +29,7 @@
 				click: function(e){
 					e.preventDefault();
 					var url = $(e.target).attr('href');
-					$(this).parents('li').remove();
+					$(this).parents('li').slideUp();
 					$.post(url, function(data) {
 						console.log(data);
 					});
@@ -55,11 +55,11 @@
 				<li data-role="list-divider">Divider One</li>
 				<li data-swipeurl="swiped.html?4"><a href="row-click.html">List Item Four</a></li>
 			</ul><br />
-			<!--
-			uncomment this button to easily trigger the swipe event from a desktop browser
+
+			<!-- uncomment this button to easily trigger the swipe event from a desktop browser
 			<br /><br />
-			<a href="javascript: $('#swipeMe li:nth-child(3)').trigger('swiperight')" data-role="button">trigger swipe right</a>
-			-->
+			<a href="javascript: $('#swipeMe li:nth-child(3)').trigger('swiperight')" data-role="button">trigger swipe right</a> -->
+
 			<p align="center">Swipe to the right on any list item to display the button</p>
 			<a href="https://github.com/commadelimited/jquery.swipeButton.js" data-role="button">Get the code</a>
 		</div>
