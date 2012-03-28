@@ -43,7 +43,7 @@ Minimum usage requires that you override the default click event. All other argu
 
 ## Contributing
 
-You are invited to contribute code and suggestions to this project. The more the merrier.
+You are invited to contribute code and suggestions to this project. The more contributors the merrier.
 
 ## Project Info
 
