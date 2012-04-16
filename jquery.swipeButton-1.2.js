@@ -3,7 +3,7 @@
 	Author: Andy andyMatthews
 	Website: http://andyMatthews.net
 	Packed With: http://jsutility.pjoneil.net/
-	Version: 1.1
+	Version: 1.2
 */
 (function($){
 
