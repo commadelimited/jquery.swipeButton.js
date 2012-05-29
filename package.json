@@ -1,0 +1,33 @@
+{
+  "name": "jquery.swipeButton",
+  "title": "jquery.swipeButton.js",
+  "description": "SwipeButton allows jQuery Mobile developers to add swipe button functionality to list items in their applications",
+  "version": "1.2.0",
+  "homepage": "http://andymatthews.net/code/swipebutton/",
+  "author": {
+    "name": "andy matthews",
+    "email": "andy@commadelimited.com",
+    "url": "http://andymatthews.net/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/commadelimited/jquery.swipeButton.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/commadelimited/jquery.swipeButton.js/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://andymatthews.net/code/swipebutton//blob/master/LICENSE-MIT"
+    },
+    {
+      "type": "GPL",
+      "url": "http://andymatthews.net/code/swipebutton//blob/master/LICENSE-GPL"
+    }
+  ],
+  "dependencies": {
+    "jquery": "1.7.2"
+  },
+  "keywords": []
+}
