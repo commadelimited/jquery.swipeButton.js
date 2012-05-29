@@ -37,6 +37,10 @@ Minimum usage requires that you override the default click event. All other argu
 		}
 	});
 
+## Unit Tests
+
+You can now run unit tests on swipeButton by loading `tests/jquery.swipeButton.js.html` in the browser of your choice.
+
 ## Contributing
 
 You are invited to contribute code and suggestions to this project. The more contributors the merrier.
