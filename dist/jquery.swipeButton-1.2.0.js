@@ -1,4 +1,4 @@
-/*! jquery.swipeButton.js - v1.2.0 - 2012-05-25
+/*! jquery.swipeButton.js - v1.2.0 - 2012-05-31
 * http://andymatthews.net/code/swipebutton/
 * Copyright (c) 2012 andy matthews; Licensed MIT, GPL */
 

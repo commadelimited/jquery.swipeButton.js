@@ -14,13 +14,13 @@ module.exports = function(grunt) {
     concat: {
       dist: {
         src: ['<banner>', '<file_strip_banner:src/<%= pkg.name %>.js>'],
-        dest: 'dist/<%= pkg.name %>.js'
+        dest: 'dist/<%= pkg.name %>-<%= pkg.version %>.js'
       }
     },
     min: {
       dist: {
         src: ['<banner>', '<config:concat.dist.dest>'],
-        dest: 'dist/<%= pkg.name %>.min.js'
+        dest: 'dist/<%= pkg.name %>-<%= pkg.version %>.min.js'
       }
     },
     qunit: {
@@ -58,3 +58,4 @@ module.exports = function(grunt) {
   grunt.registerTask('default', 'lint qunit concat min');
 
 };
+
