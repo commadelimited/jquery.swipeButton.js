@@ -19,7 +19,7 @@
 
 				// reference the current item
 				var $li = $(this);
-				var cnt = $('.ui-btn', $li).length;
+				var cnt = $('.ui-btn', $li).not(".ui-btn-icon-notext").length;
 
 				// remove all currently displayed buttons
 				$('div.ui-btn, .' + o.btnClass, $parent).animate({ width: 'toggle' }, 200, function(e) {
