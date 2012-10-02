@@ -36,7 +36,7 @@
 										'data-theme': o.btnTheme,
 										'href': $li.data('swipeurl')
 									})
-									.bind('click tap', o.click);
+									.one('click tap', o.click);
 
 					// slide insert button into list item
 					$swipeBtn.prependTo($li).button();
