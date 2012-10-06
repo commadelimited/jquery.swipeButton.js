@@ -2,7 +2,7 @@
   "name": "jquery.swipeButton",
   "title": "jquery.swipeButton.js",
   "description": "SwipeButton allows jQuery Mobile developers to add swipe button functionality to list items in their applications",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "homepage": "http://andymatthews.net/code/swipebutton/",
   "author": {
     "name": "andy matthews",
@@ -27,7 +27,7 @@
     }
   ],
   "dependencies": {
-    "jquery": "1.7.2"
+    "jquery": "1.8.2"
   },
   "keywords": []
 }
