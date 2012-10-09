@@ -11,7 +11,7 @@ Version: 1.2.3
 
         o = $.extend({}, $.fn.swipeDelete.defaults, o);
 
-        return this.filter('li').each(function (i, el) {
+        return this.filter('li').not('[data-role="list-divider"]').each(function (i, el) {
             var $e = $(el);
             var $parent = $(el).parent('ul');
 
