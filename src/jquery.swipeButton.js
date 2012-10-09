@@ -2,7 +2,7 @@
 Name: jquery.swipeButton.js
 Author: Andy andyMatthews
 Website: http://andyMatthews.net
-Version: 1.2.2
+Version: 1.2.3
 */
 (function ($) {
 
@@ -25,6 +25,9 @@ Version: 1.2.2
                     $(this).remove();
                 });
 
+                // Remove the click override from the li
+                $li.find("div a:not(' + o.btnClass + ')").off("vclick.swipe");
+
                 // if there's an existing button we simply delete it, then stop
                 if (!cnt) {
                     // create button
@@ -35,12 +38,14 @@ Version: 1.2.2
                         'class': (o.btnClass === 'aSwipeBtn') ? o.btnClass : o.btnClass + ' aSwipeBtn',
                         'data-theme': o.btnTheme,
                         'href': $li.data('swipeurl')
-                    }).on('vclick', o.click).one("vclick", function() {
+                    }).one("vclick", function () {
                         // Remove the button on click/tap if specified in the config
-                        if(o.alwaysRemove)
-                        $(this).animate({ width: "toggle" }, function() {
-                            $(this).remove();
-                        });
+                        if (o.alwaysRemove)
+                            $(this).animate({ width: "toggle" }, function () {
+                                $(this).remove();
+                                $li.find("div a:not(' + o.btnClass + ')").off("vclick.swipe");
+                            });
+                        o.click();
                     });
 
                     // slide insert button into list item
@@ -48,23 +53,24 @@ Version: 1.2.2
                     $li.find('.ui-btn').hide().animate({ width: 'toggle' }, 200);
 
                     // override row click
-                    $('div a:not(' + o.btnClass + ')', $li).on('click.swipe', function (e) {
+                    $('div a:not(' + o.btnClass + ')', $li).on('vclick.swipe', function (e) {
                         e.stopPropagation();
                         e.preventDefault();
-                        $(this).off('click.swipe');
-                        $li.removeClass('ui-btn-active').find('div.ui-btn').remove();
+                        $(this).off('vclick.swipe');
+                        $li.removeClass('ui-btn-active');
+                        $swipeBtn.animate({ width: 0 }, function() {
+                            $(this).remove();
+                        });
                     });
 
                 }
-
-
             });
 
         });
     };
 
     $.fn.swipeDelete.defaults = {
-        alwaysRemove:true,
+        alwaysRemove: true,
         direction: 'swiperight',
         btnLabel: 'Delete',
         btnTheme: 'e',
