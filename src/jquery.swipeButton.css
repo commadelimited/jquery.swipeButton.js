@@ -13,13 +13,14 @@ li[data-swipeurl] .aSwipeBtn {
 	padding: 0;
 	z-index: 100;
 	border-radius: .5em;
-
-
 	float: right;
 }
-	li[data-swipeurl] .aSwipeBtn .ui-btn-inner {
-		padding: 0.6em .9em !important;
-	}
-	li[data-swipeurl] .aSwipeBtn .ui-btn-corner-all {
-		border-radius: .5em;
-	}
+li[data-swipeurl].ui-li-has-thumb .aSwipeBtn{
+	margin-top: 22px !important;
+}
+li[data-swipeurl] .aSwipeBtn .ui-btn-inner {
+	padding: 0.6em .9em !important;
+}
+li[data-swipeurl] .aSwipeBtn .ui-btn-corner-all {
+	border-radius: .5em;
+}
