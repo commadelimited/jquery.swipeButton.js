@@ -8,6 +8,8 @@
 
 	$.fn.swipeDelete = function(o){
 
+		$(this).attr("data-swipeurl",""); //setting data-swipeurl on the li --Added: 2012/12/15
+		
 		o = $.extend( {}, $.fn.swipeDelete.defaults, o );
 		
 		return this.filter('[data-swipeurl]').each(function(i, el){
